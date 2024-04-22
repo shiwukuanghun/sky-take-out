@@ -25,7 +25,7 @@ public class RedisConfiguration {
         // 设置redis的序列化器，不设置的话，在图形化界面看到的key就是乱码
         redisTemplate.setKeySerializer(new StringRedisSerializer());
         // 给value设置序列化器
-        redisTemplate.setValueSerializer(new GenericJackson2JsonRedisSerializer());
+//        redisTemplate.setValueSerializer(new GenericJackson2JsonRedisSerializer());
         return redisTemplate;
     }
 }
