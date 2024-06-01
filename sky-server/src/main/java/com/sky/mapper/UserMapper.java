@@ -4,6 +4,8 @@ import com.sky.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
+import java.util.Map;
+
 /**
  * @Auther: WuChen
  * @Date: 2024/4/20 22:37
@@ -24,4 +26,11 @@ public interface UserMapper {
      * @param user
      */
     Long insert(User user);
+
+    /**
+     * 根据动态条件统计用户数量
+     * @param map
+     * @return
+     */
+    Integer countByMapper(Map map);
 }
